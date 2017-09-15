@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title Manager
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/papaparse/papaparse.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/bower_components/angular/angular.min.js')
+        script(src='/bower_components/angular-route/angular-route.min.js')
+        script(src='/bower_components/angular-resource/angular-resource.min.js')
+        script(src='/bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='/bower_components/ng-file-upload/ng-file-upload.min.js')
+        script(src='/bower_components/angular-papaparse/dist/js/angular-PapaParse.js')
+        script( src="/public/js/manager.min.js")
+
+    body(ng-app="manager")
+        nav.navbar.navbar-default
+            .navbar-header
+                a.navbar-brand(ui-sref="main") Manager
+            ul.nav.navbar-nav
+                li
+                    a(ui-sref="ivrs") Ivrs
+                
+        .container
+            .row
+                .col-md-3(ui-view="list")
+                .col-md-9(ui-view="data")

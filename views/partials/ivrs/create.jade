@@ -1,0 +1,40 @@
+h3 Add ivr
+form.form.form-horizontal(name="ivrForm")
+    .form-group
+        label.col-sm-3.control-label(for="name" ) Name
+        .col-sm-7
+            input.form-control(
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Input name"
+            ng-model="ivr.name"
+            required
+            )
+    
+    .form-group
+        label.col-sm-3.control-label(for="filename" ) Filename
+        .col-sm-7
+            input.form-control(
+            id="filename"
+            name="filename"
+            type="text"
+            placeholder="Input filename"
+            ng-model="ivr.filename"
+            required
+            )
+
+    .form-group
+        label.col-sm-3.control-label(for="extension" ) Filename
+        .col-sm-7
+            input.form-control(
+            id="extension"
+            name="extension"
+            type="text"
+            placeholder="Input extension"
+            ng-model="ivr.extension"
+            required
+            )
+
+    hr
+    button.btn.btn-primary.col-sm-offset-3(ng-click="save()" ng-disabled="ivrForm.$invalid") Save

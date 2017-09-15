@@ -1,0 +1,8 @@
+h3 Ivrs
+    a.ajax#addKeyBtn(ui-sref="ivrs.create")
+        span.glyphicon.glyphicon-plus-sign
+hr
+.list-group
+    a.list-group-item(ng-repeat="ivr in ivrs" ui-sref="ivrs.view({id:ivr._id})" ui-sref-active="active") {{ivr.name}}
+        i.glyphicon.glyphicon-chevron-right.pull-right
+    a.list

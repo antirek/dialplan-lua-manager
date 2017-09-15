@@ -1,0 +1,47 @@
+h3 {{ivr.name}}
+form.form.form-horizontal(name="ivrFrom")
+    .form-group
+        label.col-sm-3.control-label(for="name" ) Name
+        .col-sm-7
+            input.form-control(
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Input name"
+            ng-model="ivr.name"
+            ng-model-options="{ updateOn: 'blur' }"
+            required
+            )        
+        .col-sm-2
+          a.btn.btn-default(
+            ng-class="{'btn-success': ivr.status}"
+            ng-click="switchStatus()"
+            ) Status
+    .form-group
+        label.col-sm-3.control-label(for="name" ) Filename
+        .col-sm-7
+            input.form-control(
+            id="filename"
+            name="filename"
+            type="text"
+            placeholder="Input filename"
+            ng-model="ivr.filename"
+            ng-model-options="{ updateOn: 'blur' }"
+            required
+            )
+    .form-group
+        label.col-sm-3.control-label(for="name" ) Extension
+        .col-sm-7
+            input.form-control(
+            id="extension"
+            name="extension"
+            type="text"
+            placeholder="Input extension"
+            ng-model="ivr.extension"
+            ng-model-options="{ updateOn: 'blur' }"
+            required
+            )    
+
+    button.btn.btn-primary.col-sm-offset-3(ng-click="save()" ng-disabled="ivrFrom.$invalid") Save
+    | &nbsp;
+    button.btn.btn-danger(ng-click="delete()") Delete
