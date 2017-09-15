@@ -6,7 +6,7 @@ Server = function(config, ivrModel) {
 
   var app = express();
   app.set('views', __dirname + "/views");
-  app.set('view engine', 'jade');
+  app.set('view engine', 'pug');
   app.get('/', function(req, res) {
     return res.render('index');
   });
